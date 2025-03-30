@@ -37,8 +37,9 @@ public final class Hologram extends JavaPlugin {
         sender.sendMessage("ホログラムを作成しました: " + text);
         return true;
     }
+
     public void createHologram(String server, double x, double y, double z, String text) {
-        String worldName = "world"; // ここでワールド名を指定します。必要に応じて変更してください。
+        String worldName = "world"; // ここでワールド名を指定します
         Location location = new Location(Bukkit.getWorld(worldName), x, y, z);
         Hologram hologram = DHAPI.createHologram(location, text);
         hologram.show();

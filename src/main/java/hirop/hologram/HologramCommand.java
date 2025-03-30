@@ -4,11 +4,11 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class HologramCommand implements CommandExecutor {
+public class HolocreateCommand implements CommandExecutor {
 
     private final Hologram plugin;
 
-    public HologramCommand(Hologram plugin) {
+    public HolocreateCommand(Hologram plugin) {
         this.plugin = plugin;
     }
 
