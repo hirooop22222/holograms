@@ -1,0 +1,6 @@
+name: hologram
+version: '1.0-SNAPSHOT'
+main: hirop.hologram.Hologram
+commands:
+  holocreate:
+    usage: /holocreate <server>
