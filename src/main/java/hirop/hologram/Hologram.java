@@ -4,7 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.decentholograms.api.DHAPI;
 import me.decentholograms.api.holograms.Hologram;
@@ -16,7 +15,7 @@ public final class Hologram extends JavaPlugin {
     @Override
     public void onEnable() {
         if (getCommand("holocreate") != null) {
-            getCommand("holocreate").setExecutor(new HolocreateCommand());
+            getCommand("holocreate").setExecutor(new HolocreateCommand(this));
         } else {
             getLogger().severe("コマンド 'holocreate' が plugin.yml に見つかりません");
         }
@@ -39,6 +38,7 @@ public final class Hologram extends JavaPlugin {
         return true;
     }
     public void createHologram(String server, double x, double y, double z, String text) {
+        String worldName = "world"; // ここでワールド名を指定します。必要に応じて変更してください。
         Location location = new Location(Bukkit.getWorld(worldName), x, y, z);
         Hologram hologram = DHAPI.createHologram(location, text);
         hologram.show();
