@@ -5,8 +5,8 @@ import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
-import me.decentholograms.api.DHAPI;
-import me.decentholograms.api.holograms.Hologram;
+import com.github.decentsoftware_eu.decentholograms.api.DHAPI;
+import com.github.decentsoftware_eu.decentholograms.api.holograms.Hologram;
 
 import java.util.Arrays;
 
@@ -42,6 +42,5 @@ public final class Hologram extends JavaPlugin {
         String worldName = "world"; // ここでワールド名を指定します
         Location location = new Location(Bukkit.getWorld(worldName), x, y, z);
         Hologram hologram = DHAPI.createHologram(location, text);
-        hologram.showAll();
     }
 }
