@@ -1,6 +1,8 @@
 name: hologram
 version: '1.0-SNAPSHOT'
 main: hirop.hologram.Hologram
+softdepend:
+  - DecentHolograms
 commands:
   holocreate:
     usage: /holocreate <server>

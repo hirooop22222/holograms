@@ -15,7 +15,7 @@ public final class Hologram extends JavaPlugin {
     @Override
     public void onEnable() {
         if (getCommand("holocreate") != null) {
-            getCommand("holocreate").setExecutor(new HolocreateCommand(this));
+            getCommand("holocreate").setExecutor(new HologramCommand(this));
         } else {
             getLogger().severe("コマンド 'holocreate' が plugin.yml に見つかりません");
         }
@@ -42,6 +42,6 @@ public final class Hologram extends JavaPlugin {
         String worldName = "world"; // ここでワールド名を指定します
         Location location = new Location(Bukkit.getWorld(worldName), x, y, z);
         Hologram hologram = DHAPI.createHologram(location, text);
-        hologram.show();
+        hologram.showAll();
     }
 }
